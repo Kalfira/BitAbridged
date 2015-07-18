@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html ng-app="BitAbridged">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <base href="/"/>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" ng-controller="HeaderController">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/" class="navbar-brand">BitAbridged</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                @*<div ng-hide="hasThirdParty()" class="btn-group" dropdown is-open="status.isopen">
+                    <button type="button"
+                            class="btn btn-primary dropdown-toggle"
+                            dropdown-toggle
+                            ng-disabled="disabled">
+                        Button dropdown <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="item in thirdParty()"> <a ng-href="{{item.InfoList[1].Data}}">{{item.Content}}</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>*@
+                <ul class="nav navbar-nav" style="float: right;">
+                    <li> <a href="#/">Home</a></li>
+                    <li ng-hide="isLoggedIn()" ng-click="logout()">Logout</li>
+                    <li ng-hide="!isLoggedIn()"><a href="#/login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

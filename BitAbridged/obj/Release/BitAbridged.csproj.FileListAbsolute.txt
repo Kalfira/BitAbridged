@@ -71,8 +71,6 @@ C:\Projects\BitAbridged\BitAbridged\BitAbridged\obj\Release\BitAbridged.csproj.G
 C:\Projects\BitAbridged\BitAbridged\bin\BitAbridged.dll.config
 C:\Projects\BitAbridged\BitAbridged\bin\BitAbridged.dll
 C:\Projects\BitAbridged\BitAbridged\bin\BitAbridged.pdb
-C:\Projects\BitAbridged\BitAbridged\bin\BitAbridged.dll.CodeAnalysisLog.xml
-C:\Projects\BitAbridged\BitAbridged\bin\BitAbridged.dll.lastcodeanalysissucceeded
 C:\Projects\BitAbridged\BitAbridged\bin\Antlr3.Runtime.dll
 C:\Projects\BitAbridged\BitAbridged\bin\EntityFramework.dll
 C:\Projects\BitAbridged\BitAbridged\bin\EntityFramework.SqlServer.dll
@@ -135,6 +133,7 @@ C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.Google.xml
 C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Projects\BitAbridged\BitAbridged\bin\System.Web.Http.Owin.xml
+C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.csprojResolveAssemblyReference.cache
 C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.Migrations.Init.resources
 C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.csproj.GenerateResource.Cache
 C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.dll

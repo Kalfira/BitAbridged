@@ -14,11 +14,12 @@
             var deferred = $q.defer();
 
             $http({
-                url: '/Token',
+                url: '/api/Token',
                 method: 'POST',
                 data: 'username=' + username + '&password=' + password + '&grant_type=password',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-            }).success(function(data) {
+            }).success(function (data) {
+                console.log(data);
                 $window.sessionStorage.setItem('token', data.access_token);
                 deferred.resolve();
             }).error(function(err) {

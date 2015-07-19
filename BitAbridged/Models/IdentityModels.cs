@@ -20,7 +20,7 @@ namespace BitAbridged.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("Data Source=re929apmg5.database.windows.net;Initial Catalog=BitAbridged_db;User ID=zdegner;Password=asdf3214!")
+            : base("Data Source=re929apmg5.database.windows.net;Initial Catalog=BitAbridged_db;User ID=zdegner@re929apmg5;Password=asdf3214!")
         {
         }
 

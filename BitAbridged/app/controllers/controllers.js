@@ -2,7 +2,7 @@
     'use strict';
     angular.module('BitAbridged')
         .controller('WelcomeController', welcomeController)
-        .controller('LoginController', ['authService', loginController])
+        .controller('LoginController', ['authService', '$location', '$scope', loginController])
         .controller('HeaderController', ['$scope', headerController])
         .controller('DemoController', demoController);
 
@@ -17,10 +17,12 @@
         }
     }
 
-    function loginController() {
+    function loginController(authService, $location, $scope) {
         var vm = this;
+        $scope.vm = vm;
+        console.log(vm);
         vm.login = function () {
-            authService.login(vm.username, vm.password).then();
+            authService.login(vm.username, vm.password).then($location.path('/'), console.log("controller error"));
         }
     }
 

@@ -1,24 +1,47 @@
 ﻿(function() {
     'use strict';
-    angular.module('BitAbridged', ['ngRoute']).config(Config);
+    var app = angular.module('BitAbridged', ['ui.router']);
 
-    function Config($routeProvider, $locationProvider) {
+    app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', Config]);
+
+    function Config($stateProvider, $urlRouterProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
-        $routeProvider.when('/', {
-            templateUrl: 'app/views/welcome.html',
-            controller: 'WelcomeController',
-            controllerAs: 'vm'
-        }).when('/demo', {
-            templateUrl: 'app/views/demo.html',
-            controller: 'DemoController',
-            controllerAs: 'vm'
-        }).when('/login', {
-            templateUrl: '/app/views/login.html',
-            controller: 'LoginController'
+        $urlRouterProvider.otherwise('/');
+
+        $stateProvider
+            .state('home', {
+                url: '/',
+                templateUrl: 'app/views/welcome.html',
+                controller: 'WelcomeController'
             })
-            .otherwise({
-            redirectTo: '/'
+            .state('demo', {
+                url: "/demo",
+                templateUrl: 'app/views/demo.html',
+                controller: 'DemoController'
+            }).state('login', {
+                url: '/login',
+                templateUrl: 'app/views/login.html',
+                controller: 'LoginController'
             });
-        
     }
+
+    //function Config($routeProvider, $locationProvider) {
+    //    $locationProvider.html5Mode(true);
+    //    $routeProvider.when('/', {
+    //        templateUrl: 'app/views/welcome.html',
+    //        controller: 'WelcomeController',
+    //        controllerAs: 'vm'
+    //    }).when('/demo', {
+    //        templateUrl: 'app/views/demo.html',
+    //        controller: 'DemoController',
+    //        controllerAs: 'vm'
+    //    }).when('/login', {
+    //        templateUrl: 'app/views/login.html',
+    //        controller: 'LoginController'
+    //        })
+    //        .otherwise({
+    //        redirectTo: '/'
+    //        });
+        
+    //}
 })();

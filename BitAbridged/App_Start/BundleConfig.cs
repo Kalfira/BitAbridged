@@ -25,7 +25,8 @@ namespace BitAbridged
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular.js",
-                "~/Scripts/angular-route.js",
+                "~/Scripts/angular-ui-router.js",
+                "~/Scripts/ui-bootstrap.min.js",
                 "~/app/app.js",
                 "~/app/services/services.js",
                 "~/app/controllers/controllers.js"));

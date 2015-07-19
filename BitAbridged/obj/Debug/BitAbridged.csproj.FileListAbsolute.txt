@@ -133,8 +133,8 @@ C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.Google.xml
 C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Projects\BitAbridged\BitAbridged\bin\System.Web.Http.Owin.xml
-C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.csprojResolveAssemblyReference.cache
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.Migrations.Init.resources
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.csproj.GenerateResource.Cache
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.dll
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.pdb
+C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.csprojResolveAssemblyReference.cache

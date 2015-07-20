@@ -1,1 +1,96 @@
-﻿{{vm.message}}
+﻿<div class="container">
+    <!--<script src="~/Scripts/jekyll-search.js"></script>
+    <script>
+        SimpleJekyllSearch.init({
+            dataSource: '~/search.json',
+            searchInput: document.getElementById('banner-search'),
+            resultsContainer: document.getElementById('banner-search-result'),
+
+            searchResultTemplate: '<li><a href="{url}">{language}</a></li>',
+            noResultsText: 'We don\'t seem to have that one. Maybe you can help by adding it?',
+            limit: 5,
+            fuzzy: false
+        });
+    </script>-->
+    <!-- Introduction Row -->
+    <section>
+        <header>
+            <h2>Bit Abridged</h2>
+            <span class="byline">
+                An abridgement is defined as a shorted or condensed form of a work that still retains the basic contents.<br />
+                Our goal here is do the same for a variety of frameworks and languages to serve as a quick reference guide to quickly and consisely find both what you are looking for, but an example of how it works as well. Happy coding!
+            </span>
+        </header>
+    </section>
+    <!--<input id="banner-search" autocomplete="off" placeholder="Search for a language. Examples: python, ruby, c++" type="text" class="text" ng-keyup="alert('hey!')"/>
+    <ul class="dropotron" id="banner-search-result" style="display: none;"></ul>
+
+    <p>Typing in the input box below updates the key count</p>
+    <input ng-keyup="count = count + 1" ng-init="count=0"> key up count: {{count}}-->
+    <div>
+        Search: <input ng-model="query"><br/>
+        <ul>
+            <li ng-repeat="item in vm.searchable | filter:query">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+
+    <!-- Team Members Row -->
+    <div class="row">
+        {{vm.message}}
+        <div class="col-lg-12">
+            <h2 class="page-header">Our Team</h2>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center">
+            <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <h3>
+                John Smith
+                <small>Job Title</small>
+            </h3>
+            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center">
+            <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <h3>
+                John Smith
+                <small>Job Title</small>
+            </h3>
+            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center">
+            <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <h3>
+                John Smith
+                <small>Job Title</small>
+            </h3>
+            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center">
+            <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <h3>
+                John Smith
+                <small>Job Title</small>
+            </h3>
+            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center">
+            <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <h3>
+                John Smith
+                <small>Job Title</small>
+            </h3>
+            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center">
+            <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <h3>
+                John Smith
+                <small>Job Title</small>
+            </h3>
+            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+        </div>
+    </div>
+    <hr>
+
+</div>

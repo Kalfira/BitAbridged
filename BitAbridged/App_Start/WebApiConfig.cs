@@ -1,4 +1,5 @@
 ﻿using Microsoft.Owin.Security.OAuth;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace BitAbridged
@@ -11,6 +12,7 @@ namespace BitAbridged
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
             config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();

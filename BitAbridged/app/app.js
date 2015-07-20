@@ -15,9 +15,13 @@
                 controller: 'WelcomeController'
             })
             .state('demo', {
-                url: "/demo",
-                templateUrl: 'app/views/demo.html',
-                controller: 'DemoController'
+                url: '/demo',
+                controller: 'DemoController',
+                views: {
+                    '':{templateUrl:'app/views/demo.html'},
+                    'columnOne@demo': { template: 'columnOne!' },
+                    'columnTwo@demo': {template: 'columnTwo!'}
+                }
             }).state('login', {
                 url: '/login',
                 templateUrl: 'app/views/login.html',

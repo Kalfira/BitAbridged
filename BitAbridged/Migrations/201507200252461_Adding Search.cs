@@ -3,7 +3,7 @@ namespace BitAbridged.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Init : DbMigration
+    public partial class AddingSearch : DbMigration
     {
         public override void Up()
         {
@@ -30,6 +30,17 @@ namespace BitAbridged.Migrations
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId)
                 .Index(t => t.RoleId);
+            
+            CreateTable(
+                "dbo.Searchables",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                        Url = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -93,6 +104,7 @@ namespace BitAbridged.Migrations
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
+            DropTable("dbo.Searchables");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
         }

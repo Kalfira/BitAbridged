@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -20,7 +21,8 @@ namespace BitAbridged.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("Data Source=re929apmg5.database.windows.net;Initial Catalog=BitAbridged_db;User ID=zdegner@re929apmg5;Password=asdf3214!")
+            : base("DefaultConnection")
+        //: base("Server=tcp:re929apmg5.database.windows.net,1433;Database=bittest_db;User ID=zdegner@re929apmg5;Password=asdf3214!;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;")
         {
         }
 
@@ -28,5 +30,7 @@ namespace BitAbridged.Models
         {
             return new ApplicationDbContext();
         }
+
+        public IDbSet<Searchable> Searchables { get; set; }
     }
 }

@@ -7,13 +7,13 @@ namespace BitAbridged.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class Init : IMigrationMetadata
+    public sealed partial class AddingSearch : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddingSearch));
         
         string IMigrationMetadata.Id
         {
-            get { return "201507182032173_Init"; }
+            get { return "201507200252461_Adding Search"; }
         }
         
         string IMigrationMetadata.Source

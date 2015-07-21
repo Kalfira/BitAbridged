@@ -134,7 +134,14 @@ C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Projects\BitAbridged\BitAbridged\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Projects\BitAbridged\BitAbridged\bin\System.Web.Http.Owin.xml
 C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.csprojResolveAssemblyReference.cache
-C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.Migrations.Init.resources
 C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.csproj.GenerateResource.Cache
 C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.dll
 C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.pdb
+C:\Projects\BitAbridged\BitAbridged\bin\Ninject.dll
+C:\Projects\BitAbridged\BitAbridged\bin\Ninject.Web.Common.dll
+C:\Projects\BitAbridged\BitAbridged\bin\Ninject.Web.Mvc.dll
+C:\Projects\BitAbridged\BitAbridged\bin\WebActivatorEx.dll
+C:\Projects\BitAbridged\BitAbridged\bin\Ninject.xml
+C:\Projects\BitAbridged\BitAbridged\bin\Ninject.Web.Common.xml
+C:\Projects\BitAbridged\BitAbridged\bin\Ninject.Web.Mvc.xml
+C:\Projects\BitAbridged\BitAbridged\obj\Release\BitAbridged.Migrations.AddingSearch.resources

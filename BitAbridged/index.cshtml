@@ -24,8 +24,8 @@
                 <div style="float: left;">
                     <input ng-model="query" placeholder="Quick Search..." style="margin-top: 10px; ">
                     <ul >
-                        <li ng-repeat="item in filteredItems = (vm.searchable | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;">
-                            <a ui-sref="{{item.Url}}" style="display:flex;justify-content:center;align-items:center;" alt="Penis!">{{item.Name}}</a>
+                        <li ng-repeat="item in filteredItems = (vm.searchable | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;" ng-click="vm.clear()" class="search-result" title="{{item.Description}}">
+                            <a ui-sref="{{item.Url}}" style="display:flex;justify-content:center;align-items:center;">{{item.Name}}</a>
 
                         </li>
                     </ul>

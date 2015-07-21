@@ -17,11 +17,7 @@
             .state('demo', {
                 url: '/demo',
                 controller: 'DemoController',
-                views: {
-                    '':{templateUrl:'app/views/demo.html'},
-                    'columnOne@demo': { template: 'columnOne!' },
-                    'columnTwo@demo': {template: 'columnTwo!'}
-                }
+                templateUrl: 'app/views/demo.html'
             }).state('login', {
                 url: '/login',
                 templateUrl: 'app/views/login.html',

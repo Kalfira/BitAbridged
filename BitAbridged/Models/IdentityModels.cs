@@ -21,8 +21,8 @@ namespace BitAbridged.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection")
-        //: base("Server=tcp:re929apmg5.database.windows.net,1433;Database=bittest_db;User ID=zdegner@re929apmg5;Password=asdf3214!;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;")
+            //: base("DefaultConnection")
+            : base("Server=tcp:re929apmg5.database.windows.net,1433;Database=bittest_db;User ID=zdegner@re929apmg5;Password=asdf3214!;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;")
         {
         }
 

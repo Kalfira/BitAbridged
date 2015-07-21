@@ -248,7 +248,6 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="app\_Layout.cshtml" />
-    <Content Include="search.json" />
     <None Include="Properties\PublishProfiles\BitAbridged.pubxml" />
     <None Include="Properties\PublishProfiles\bittest.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

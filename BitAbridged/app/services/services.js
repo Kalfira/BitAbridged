@@ -54,7 +54,6 @@
                     method: 'GET'
                 }).success(function (data) {
                     searchable = data;
-                    //$window.sessionStorage.setItem('token', data.access_token);
                     deferred.resolve(searchable);
                 }).error(function (err) {
                     console.log(err);

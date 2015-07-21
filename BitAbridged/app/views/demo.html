@@ -9,14 +9,8 @@
                 e.style.display = 'block';
         }
     </script>-->
-    <div class="row">
-        <div id="content">
-            <article>
-                <h2 style="display:flex;justify-content:center;align-items:center; font-size:xx-large; font-weight:700">CHANGEME</h2>
-                <span class="byline" style="display:flex;justify-content:center;align-items:center;padding-bottom: 1em;">ALSO CHANGEME</span>
-            </article>
-        </div>
-    </div>
+
+    <h1 style="display:flex;justify-content:center;align-items:center;font-size:xx-large; font-weight: 700;">Language</h1>
     <div class="row">
         <div class="col-md-4">
             <div class="list-group">
@@ -26,7 +20,7 @@
                     </h1>
                 </div>
                 <div class="list-group-item" ng-repeat="item in vm.catagories[0].Items">
-                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right">v</i></div>
+                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i></div>
                     <div ng-hide="!show" ng-click="show=!show">
                         <div ng-repeat="(key, value) in item.Contents">
                             <h4>{{key}}</h4>
@@ -44,7 +38,7 @@
                     </h1>
                 </div>
                 <div class="list-group-item" ng-repeat="item in vm.catagories[1].Items">
-                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right">v</i></div>
+                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i></div>
                     <div ng-hide="!show" ng-click="show=!show">
                         <div ng-repeat="(key, value) in item.Contents">
                             <h4>{{key}}</h4>
@@ -62,8 +56,8 @@
                     </h1>
                 </div>
                 <div class="list-group-item" ng-repeat="item in vm.catagories[2].Items">
-                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right">v</i></div>
-                    <div ng-hide="!show" ng-click="show=!show">
+                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i></div>
+                    <div ng-hide="!show">
                         <div ng-repeat="(key, value) in item.Contents">
                             <h4>{{key}}</h4>
                             <div style="background-color:black;color:white;border-radius:5px;padding:1em;" ng-show="value">{{value}}</div>

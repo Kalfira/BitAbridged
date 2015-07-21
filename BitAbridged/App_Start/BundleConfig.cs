@@ -21,6 +21,8 @@ namespace BitAbridged
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/fonts/font-mfizz.css",
+                      "~/Content/css/font-awesome.min.css",
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(

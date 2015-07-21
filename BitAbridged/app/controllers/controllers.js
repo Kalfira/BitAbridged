@@ -3,8 +3,9 @@
     angular.module('BitAbridged')
         .controller('WelcomeController', ['$scope', 'searchService', welcomeController])
         .controller('LoginController', ['authService', '$location', '$scope', loginController])
-        .controller('HeaderController', ['$scope', 'searchService', headerController])
+        .controller('HeaderController', ['$scope', 'searchService', 'authService', headerController])
         .controller('DemoController', ['$scope', demoController])
+        .controller('PreviewController', function() {})
         .filter('SearchFilter', [
             function() {
                 return function(items, searchText) {
@@ -26,17 +27,22 @@
         $scope.vm = vm;
     }
 
-    function headerController($scope, searchService) {
+    function headerController($scope, searchService, authService) {
         var vm = this;
         vm.clear = function (){$scope.query = ''}
         vm.searchable = 
         searchService.preload().then(function (data) {
             vm.searchable = data;
         });
+        vm.isLoggedIn = function () {
+            if (authService.isLoggedIn()) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        vm.logout = authService.logout;
         $scope.vm = vm;
-        $scope.isLoggedIn = function () {
-            return true;
-        }
     }
 
     function loginController(authService, $location, $scope) {

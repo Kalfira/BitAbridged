@@ -22,6 +22,9 @@
                 url: '/login',
                 templateUrl: 'app/views/login.html',
                 controller: 'LoginController'
+            }).state('preview', {
+                url: '/preview',
+                templateUrl: 'app/views/preview.html',
             });
     }
 

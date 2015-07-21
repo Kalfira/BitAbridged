@@ -2,52 +2,67 @@
 <!DOCTYPE html>
 <html ng-app="BitAbridged">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <title>Bit Abridged</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
 
-    <base href="/" />
+
+    <base href="/"/>
 </head>
 <body>
-<div id="testdivpleaseignore"></div>
-<div class="navbar navbar-inverse navbar-fixed-top" style="position: fixed;">
-    <div class="container" ng-controller="HeaderController">
-        <div class="navbar-header" style="position: fixed">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="~/#/" class="navbar-brand">BitAbridged</a>
-            <div style="float: left;">
-                <input ng-model="query" placeholder="Quick Search..." style="margin-top: 10px;">
-                <ul >
-                    <li ng-repeat="item in filteredItems = (vm.searchable | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;" ng-click="vm.clear()" class="search-result" title="{{item.Description}}">
-                        <a ui-sref="{{item.Url}}" style="display: flex; justify-content: center; align-items: center;">{{item.Name}}</a>
+<div id="container">
+    <div id="header-container">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="position: fixed;">
+            <div class="container" ng-controller="HeaderController">
+                <div class="navbar-header" style="position: fixed">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="~/#/" class="navbar-brand" style="color: white;">Bit[<span style="color:#4CC0A4">Abridged</span>]</a>
+                    <div style="float: left;">
+                        <input ng-model="query" placeholder="Quick Search..." style="margin-top: 10px;">
+                        <ul>
+                            <li ng-repeat="item in filteredItems = (vm.searchable | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;" ng-click="vm.clear()" class="search-result" title="{{item.Description}}">
+                                <a ui-sref="{{item.Url}}" style="display: flex; justify-content: center; align-items: center;">{{item.Name}}</a>
 
-                    </li>
-                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" style="float: right;">
+                        <li> <a ui-sref="home">Home</a></li>
+                        <li><a ui-sref="demo">Demo</a></li>
+                        <li ng-hide="!vm.isLoggedIn()"><a ng-click="vm.logout()">Logout</a></li>
+                        <li ng-hide="vm.isLoggedIn()"><a ui-sref="login">Login</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav" style="float: right;">
-                <li> <a ui-sref="home">Home</a></li>
-                <li><a ui-sref="demo">Demo</a></li>
-                <li ng-hide="isLoggedIn()" ng-click="logout()">Logout</li>
-                <li ng-hide="!isLoggedIn()"><a ui-sref="login">Login</a></li>
-            </ul>
+    </div>
+    <div id="body-container">
+        <div ui-view>
         </div>
     </div>
+    <div id="footer-container">
+        <div class="row" style="background-color: black; color: white; text-align: center;">
+            <ul style="list-style-type: none; font-size: 50px; margin-bottom: 0px;">
+                <a href="https://github.com/Kalfira" style="display: inline-block;"><li class="icon fa-github" title="GitHub"></li></a>
+                <a href="mailto:zdegner@gmail.com" style="display: inline-block;"><li class="icon fa-envelope" title="Contact"></li></a>
+                <a href="https://www.linkedin.com/profile/view?id=61006548" style="display: inline-block;"><li class="icon fa-linkedin" title="LinkedIn"></li></a>
+            </ul>
+            <p>&copy; 2015 - Zane Degner</p>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular")
 </div>
-<div class="container body-content" ui-view>
-</div>
-
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
-@Scripts.Render("~/bundles/angular")
 </body>
+
 </html>

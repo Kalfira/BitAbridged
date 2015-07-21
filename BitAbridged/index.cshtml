@@ -12,41 +12,42 @@
     <base href="/" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" style="position: fixed;">
-        <div class="container" ng-controller="HeaderController">
-            <div class="navbar-header" style="position: fixed">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="~/#/" class="navbar-brand">BitAbridged</a>
-                <div style="float: left;">
-                    <input ng-model="query" placeholder="Quick Search..." style="margin-top: 10px; ">
-                    <ul >
-                        <li ng-repeat="item in filteredItems = (vm.searchable | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;" ng-click="vm.clear()" class="search-result" title="{{item.Description}}">
-                            <a ui-sref="{{item.Url}}" style="display:flex;justify-content:center;align-items:center;">{{item.Name}}</a>
+<div id="testdivpleaseignore"></div>
+<div class="navbar navbar-inverse navbar-fixed-top" style="position: fixed;">
+    <div class="container" ng-controller="HeaderController">
+        <div class="navbar-header" style="position: fixed">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="~/#/" class="navbar-brand">BitAbridged</a>
+            <div style="float: left;">
+                <input ng-model="query" placeholder="Quick Search..." style="margin-top: 10px;">
+                <ul >
+                    <li ng-repeat="item in filteredItems = (vm.searchable | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;" ng-click="vm.clear()" class="search-result" title="{{item.Description}}">
+                        <a ui-sref="{{item.Url}}" style="display: flex; justify-content: center; align-items: center;">{{item.Name}}</a>
 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" style="float: right;">
-                    <li> <a ui-sref="home">Home</a></li>
-                    <li><a ui-sref="demo">Demo</a></li>
-                    <li ng-hide="isLoggedIn()" ng-click="logout()">Logout</li>
-                    <li ng-hide="!isLoggedIn()"><a ui-sref="login">Login</a></li>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container body-content" ui-view>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/angular")
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" style="float: right;">
+                <li> <a ui-sref="home">Home</a></li>
+                <li><a ui-sref="demo">Demo</a></li>
+                <li ng-hide="isLoggedIn()" ng-click="logout()">Logout</li>
+                <li ng-hide="!isLoggedIn()"><a ui-sref="login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container body-content" ui-view>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/angular")
 </body>
 </html>

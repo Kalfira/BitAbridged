@@ -1,16 +1,76 @@
-﻿<div class="jumbotron text-center">
-    <h1>The Demo Page!</h1>
-    {{vm.message}}
+﻿<div class="container">
+    <!--<script type="text/javascript">
+        function toggle_visibility(id) {
+            console.log(id);
+            var e = document.getElementById(id);
+            if (e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script>-->
+    <div class="row">
+        <div id="content">
+            <article>
+                <h2 style="display:flex;justify-content:center;align-items:center; font-size:xx-large; font-weight:700">CHANGEME</h2>
+                <span class="byline" style="display:flex;justify-content:center;align-items:center;padding-bottom: 1em;">ALSO CHANGEME</span>
+            </article>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="list-group">
+                <div class="list-group-item active" style="background-color:black;">
+                    <h1>
+                        {{vm.catagories[0].Name}}
+                    </h1>
+                </div>
+                <div class="list-group-item" ng-repeat="item in vm.catagories[0].Items">
+                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right">v</i></div>
+                    <div ng-hide="!show" ng-click="show=!show">
+                        <div ng-repeat="(key, value) in item.Contents">
+                            <h4>{{key}}</h4>
+                            <div style="background-color:black;color:white;border-radius:5px;padding:1em;">{{value}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="list-group">
+                <div class="list-group-item active" style="background-color:black;">
+                    <h1>
+                        {{vm.catagories[1].Name}}
+                    </h1>
+                </div>
+                <div class="list-group-item" ng-repeat="item in vm.catagories[1].Items">
+                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right">v</i></div>
+                    <div ng-hide="!show" ng-click="show=!show">
+                        <div ng-repeat="(key, value) in item.Contents">
+                            <h4>{{key}}</h4>
+                            <div style="background-color:black;color:white;border-radius:5px;padding:1em;">{{value}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="list-group">
+                <div class="list-group-item active" style="background-color:black;">
+                    <h1>
+                        {{vm.catagories[2].Name}}
+                    </h1>
+                </div>
+                <div class="list-group-item" ng-repeat="item in vm.catagories[2].Items">
+                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right">v</i></div>
+                    <div ng-hide="!show" ng-click="show=!show">
+                        <div ng-repeat="(key, value) in item.Contents">
+                            <h4>{{key}}</h4>
+                            <div style="background-color:black;color:white;border-radius:5px;padding:1em;" ng-show="value">{{value}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="row">
-
-    <div class="col-sm-6">
-        <div ui-view="columnOne"></div>
-    </div>
-    
-    <div class="col-sm-6">
-        <div ui-view="columnTwo"></div>
-    </div>
-
-</div> 

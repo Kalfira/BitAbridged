@@ -249,7 +249,6 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="app\_Layout.cshtml" />
     <None Include="Properties\PublishProfiles\BitAbridged.pubxml" />
-    <None Include="Properties\PublishProfiles\bittest.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jekyll-search.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

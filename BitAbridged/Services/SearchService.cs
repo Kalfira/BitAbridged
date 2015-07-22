@@ -18,9 +18,9 @@ namespace BitAbridged.Services
         {
             _context = context;
         }
-        public IList<Searchable> GetSearchables()
+        public IList<Language> GetSearchables()
         {
-            return _context.Searchables.ToList();
+            return _context.Languages.ToList();
         }
     }
 }

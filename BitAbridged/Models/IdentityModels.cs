@@ -31,6 +31,7 @@ namespace BitAbridged.Models
             return new ApplicationDbContext();
         }
 
-        public IDbSet<Searchable> Searchables { get; set; }
+        public IDbSet<Language> Languages { get; set; }
+        public IDbSet<Snippet> Snippets { get; set; }
     }
 }

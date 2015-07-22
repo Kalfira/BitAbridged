@@ -203,12 +203,18 @@
     <Compile Include="Migrations\201507200252461_Adding Search.Designer.cs">
       <DependentUpon>201507200252461_Adding Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507220846224_Language and snippet support.cs" />
+    <Compile Include="Migrations\201507220846224_Language and snippet support.Designer.cs">
+      <DependentUpon>201507220846224_Language and snippet support.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Language.cs" />
     <Compile Include="Models\Searchable.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Snippet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
@@ -298,6 +304,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201507200252461_Adding Search.resx">
       <DependentUpon>201507200252461_Adding Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507220846224_Language and snippet support.resx">
+      <DependentUpon>201507220846224_Language and snippet support.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

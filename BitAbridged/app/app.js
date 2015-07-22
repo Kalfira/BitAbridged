@@ -17,10 +17,6 @@
                 url: '/login',
                 templateUrl: 'app/views/login.html',
                 controller: 'LoginController'
-            }).state('languages', {
-                url: '/languages/',
-                templateUrl: 'app/views/languages.html',
-                controller: 'LanguagesController'
             }).state('language', {
                 url: '/languages/:lang',
                 templateUrl: 'app/views/language.html',

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using BitAbridged.Models;
+﻿using BitAbridged.Models;
 using BitAbridged.Services;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace BitAbridged.Controllers.api
@@ -18,7 +18,7 @@ namespace BitAbridged.Controllers.api
         }
 
         [HttpGet]
-        public IList<Searchable> Index()
+        public IList<Language> Index()
         {
             return _service.GetSearchables();
         }

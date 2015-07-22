@@ -6,6 +6,6 @@ namespace BitAbridged.Services
 {
     public interface ISearchService
     {
-        IList<Searchable> GetSearchables();
+        IList<Language> GetSearchables();
     }
 }

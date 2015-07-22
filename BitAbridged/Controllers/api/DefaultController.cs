@@ -5,9 +5,9 @@ namespace BitAbridged.Controllers.api
     public class DefaultController : ApiController
     {
         [HttpGet]
-        public string Index()
+        public IHttpActionResult Index()
         {
-            return "HEY!";
+            return Redirect("~");
         }
     }
 }

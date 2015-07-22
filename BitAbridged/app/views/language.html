@@ -1,4 +1,4 @@
-﻿<div class="container">
+﻿<div ng-hide="vm.loaded"class="container">
     <!--<script type="text/javascript">
         function toggle_visibility(id) {
             console.log(id);
@@ -9,8 +9,49 @@
                 e.style.display = 'block';
         }
     </script>-->
-
-    <h1 style="display:flex;justify-content:center;align-items:center;font-size:xx-large; font-weight: 700;">{{vm.lang}}</h1>
+    <div id="bbcard">
+        <h1 style="display: flex; justify-content: center; align-items: center; font-size: xx-large; font-weight: 700;">{{vm.language[0].Name}}</h1>
+        <h3 style="display: flex; justify-content: center; align-items: center; font-size: large;">{{vm.language[0].Use}}</h3>
+        
+            <table style="border-right: red 2px solid; text-align: center;" class="col-md-6">
+                <tr>
+                    <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Imperative_programming" title="What's this?">Imperative: </a></td>
+                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Imperative}}</td>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Imperative_programming" title="What's this?">Object Oriented: </a></td>
+                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].ObjectOriented}}</td>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid black; width: 50%;"><a href=" https />/en.wikipedia.org/wiki/Functional_programming" title="What's this?">Functional</a></td>
+                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Functional}}</td>
+                </tr>
+                <tr>
+                     <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Procedural_programming" title="What's this?">Procedural:</a></td>
+                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Procedural}}</td>
+                </tr>
+            </table>
+            <div style="width: 15px;"></div>
+            <table style="border: 2px solid black; text-align: center;" class="col-md-6">
+                <tr>
+                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Generic_programming" title="What's this?'">Generic: </a></td>
+                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Generic}}</td>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Reflective_programming" title="What's this?">Reflective:  </a></td>
+                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Reflective}}</td>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Event-driven_programming" title="What's this?">Event Driven: </a></td>
+                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].EventDriven}}</td>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Standardization" title="What's this?">Standardized: </a></td>
+                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Standardized}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-4">
             <div class="list-group">

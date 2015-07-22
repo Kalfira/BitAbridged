@@ -145,3 +145,4 @@ C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.csproj.GenerateResourc
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.dll
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.pdb
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.csprojResolveAssemblyReference.cache
+C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.Migrations.Languageandsnippetsupport.resources

@@ -44,16 +44,16 @@
     angular.module('BitAbridged')
         .factory('searchService', function ($http, $q) {
             var service = {};
-            var searchable;
-            service.preload = preload;
-            function preload() {
+            service.load = load;
+            service.searchable;
+            function load() {
                 var deferred = $q.defer();
                 $http({
                     url: '/api/Search',
                     method: 'GET'
                 }).success(function (data) {
-                    searchable = data;
-                    deferred.resolve(searchable);
+                    service.searchable = data;
+                    deferred.resolve(data);
                 }).error(function (err) {
                     console.log(err);
                     deferred.reject();

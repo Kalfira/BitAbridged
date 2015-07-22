@@ -26,7 +26,7 @@
                         <div style="float: left;" ng-hide="!vm.loaded">
                             <input ng-model="query" placeholder="Quick Search..." style="margin-top: 10px;">
                             <ul>
-                                <li ng-repeat="item in filteredItems = (vm.searchable | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;" ng-click="vm.clear()" class="search-result" title="{{item.Description}}">
+                                <li ng-repeat="item in filteredItems = (vm.languages | SearchFilter:query)" ng-hide="!filteredItems.length" style="background: white; list-style: none; position: relative; right: 40px; width: 137px; border: 1px solid black;" ng-click="vm.clear()" class="search-result" title="{{item.Use}}">
                                     <a ui-sref="{{item.Url}}" style="display: flex; justify-content: center; align-items: center;">{{item.Name}}</a>
 
                                 </li>
@@ -39,8 +39,8 @@
                             <li ng-mouseover="mouseOver = false" ng-mouseleave="mouseOver = true;" >
                                 <div style="position: static;">
                                     <a ui-sref="languages" style="background-color: #222222; float: right; color:#999999; display: block; padding-top: 15px; line-height: 20px;">Languages</a>
-                                    <div ng-hide="mouseOver" style="position: absolute; padding-top: 50px;">
-                                        <div ng-repeat="item in vm.searchable" style="background: white; list-style: none; position: relative; width: 137px; border: 1px solid black;" title="{{item.Description}}">
+                                    <div ng-hide="mouseOver" style="position: absolute; padding-top: 40px; ">
+                                        <div ng-repeat="item in vm.languages" style="background: white; list-style: none; position: relative; width: 137px; border: 1px solid black;" title="{{item.Use}}">
                                             <a ui-sref="{{item.Url}}" style="display: flex; justify-content: center; align-items: center; clear: both;">{{item.Name}}</a>
                                         </div>
                                     </div>

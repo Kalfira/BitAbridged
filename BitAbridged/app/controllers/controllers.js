@@ -4,8 +4,8 @@
         .controller('WelcomeController', ['$scope', 'searchService', welcomeController])
         .controller('LoginController', ['authService', '$location', '$scope', loginController])
         .controller('HeaderController', ['$scope', 'searchService', 'authService', headerController])
-        .controller('DemoController', ['$scope', demoController])
-        .controller('PreviewController', function() {})
+        .controller('LanguagesController', ['$scope', languagesController])
+        .controller('LanguageController', ['$scope', '$stateParams', languageController])
         .filter('SearchFilter', [
             function() {
                 return function(items, searchText) {
@@ -33,6 +33,7 @@
         vm.searchable = 
         searchService.preload().then(function (data) {
             vm.searchable = data;
+            vm.loaded = true;
         });
         vm.isLoggedIn = function () {
             if (authService.isLoggedIn()) {
@@ -53,8 +54,9 @@
         }
     }
 
-    function demoController($scope) {
+    function languageController($scope, $stateParams) {
         var vm = this;
+        vm.lang = $stateParams.lang;
         vm.catagories =
             [
                 {
@@ -105,5 +107,9 @@
                     }]}];
         vm.message = 'demo page!';
         $scope.vm = vm;
+    }
+
+    function languagesController() {
+        
     }
 })();

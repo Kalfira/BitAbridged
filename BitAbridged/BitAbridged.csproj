@@ -222,9 +222,9 @@
     <Content Include="app\app.js" />
     <Content Include="app\controllers\controllers.js" />
     <Content Include="app\services\services.js" />
-    <Content Include="app\views\demo.html" />
+    <Content Include="app\views\language.html" />
+    <Content Include="app\views\languages.html" />
     <Content Include="app\views\login.html" />
-    <Content Include="app\views\preview.html" />
     <Content Include="app\views\welcome.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

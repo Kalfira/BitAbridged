@@ -144,3 +144,4 @@ C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.Migrations.AddingSearc
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.csproj.GenerateResource.Cache
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.dll
 C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.pdb
+C:\Projects\BitAbridged\BitAbridged\obj\Debug\BitAbridged.csprojResolveAssemblyReference.cache

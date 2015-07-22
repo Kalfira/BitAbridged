@@ -67,7 +67,7 @@
         vm.language = vm.languages.filter(function(data) {
             return vm.lang == data.Name;
         });
-        console.log(vm.language);
+        console.log(vm.language[0].FF1);
         vm.catagories;
         $scope.vm = vm;
     }

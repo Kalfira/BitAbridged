@@ -199,13 +199,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507200252461_Adding Search.cs" />
-    <Compile Include="Migrations\201507200252461_Adding Search.Designer.cs">
-      <DependentUpon>201507200252461_Adding Search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201507220846224_Language and snippet support.cs" />
-    <Compile Include="Migrations\201507220846224_Language and snippet support.Designer.cs">
-      <DependentUpon>201507220846224_Language and snippet support.cs</DependentUpon>
+    <Compile Include="Migrations\201507222328000_Reinitialize.cs" />
+    <Compile Include="Migrations\201507222328000_Reinitialize.Designer.cs">
+      <DependentUpon>201507222328000_Reinitialize.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -237,6 +233,7 @@
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\lang.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\font-mfizz.css" />
@@ -302,11 +299,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507200252461_Adding Search.resx">
-      <DependentUpon>201507200252461_Adding Search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507220846224_Language and snippet support.resx">
-      <DependentUpon>201507220846224_Language and snippet support.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507222328000_Reinitialize.resx">
+      <DependentUpon>201507222328000_Reinitialize.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

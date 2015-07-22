@@ -1,108 +1,140 @@
-﻿<div ng-hide="vm.loaded"class="container">
-    <!--<script type="text/javascript">
-        function toggle_visibility(id) {
-            console.log(id);
-            var e = document.getElementById(id);
-            if (e.style.display == 'block')
-                e.style.display = 'none';
-            else
-                e.style.display = 'block';
-        }
-    </script>-->
+﻿<div ng-hide="vm.loaded" class="container">
+    <link href="/Content/lang.css" rel="stylesheet">
     <div id="bbcard">
         <h1 style="display: flex; justify-content: center; align-items: center; font-size: xx-large; font-weight: 700;">{{vm.language[0].Name}}</h1>
-        <h3 style="display: flex; justify-content: center; align-items: center; font-size: large;">{{vm.language[0].Use}}</h3>
-        
-            <table style="border-right: red 2px solid; text-align: center;" class="col-md-6">
-                <tr>
-                    <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Imperative_programming" title="What's this?">Imperative: </a></td>
-                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Imperative}}</td>
-                </tr>
-                <tr>
-                    <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Imperative_programming" title="What's this?">Object Oriented: </a></td>
-                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].ObjectOriented}}</td>
-                </tr>
-                <tr>
-                    <td style="border: 2px solid black; width: 50%;"><a href=" https />/en.wikipedia.org/wiki/Functional_programming" title="What's this?">Functional</a></td>
-                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Functional}}</td>
-                </tr>
-                <tr>
-                     <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Procedural_programming" title="What's this?">Procedural:</a></td>
-                    <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Procedural}}</td>
-                </tr>
-            </table>
-            <div style="width: 15px;"></div>
-            <table style="border: 2px solid black; text-align: center;" class="col-md-6">
-                <tr>
-                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Generic_programming" title="What's this?'">Generic: </a></td>
-                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Generic}}</td>
-                </tr>
-                <tr>
-                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Reflective_programming" title="What's this?">Reflective:  </a></td>
-                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Reflective}}</td>
-                </tr>
-                <tr>
-                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Event-driven_programming" title="What's this?">Event Driven: </a></td>
-                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].EventDriven}}</td>
-                </tr>
-                <tr>
-                    <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Standardization" title="What's this?">Standardized: </a></td>
-                    <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Standardized}}</td>
-                </tr>
-            </table>
+        <h3 style="display: flex; justify-content: center; align-items: center; font-size: large;">Primary Usage: {{vm.language[0].Use}}</h3>
+
+        <div class="span7">
+            <div class="widget stacked widget-table action-table" style="width: 100%; border-bottom: 2px solid #999999;">
+
+                <div class="widget-header" style="display:flex;justify-content:center;align-items:center; border-bottom: 2px solid #999999;">
+                    <h3 style="padding-bottom: 10px;">Fast Facts</h3>
+                </div> <!-- /widget-header -->
+                <div style="width: 100%; border-bottom: 2px solid #999999;">
+                    <div style="display: inline-block; text-align: center; width: 25%; border-left: 2px solid #999999; border-right: 2px solid #999999">
+                        <div style="border-bottom:2px solid #999999"><a href="https://en.wikipedia.org/wiki/Imperative_programming" title="What's this?">Imperative: <i class="fa fa-check fa-lg" style="color:green;" ng-hide="!vm.language[0].Imperative"></i><i class="fa fa-close fa-lg" style="color:red" ng-hide="vm.language[0].Imperative"></i></a></div>
+                        <div style="border-bottom:2px solid #999999"><a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="What's this?">Object Oriented: <i class="fa fa-check fa-lg" style="color:green;" ng-hide="!vm.language[0].ObjectOriented"></i><i class="fa fa-close fa-lg" style="color:red;" ng-hide="vm.language[0].ObjectOriented"></i></a></div>
+                        <div style="border-bottom:2px solid #999999"><a href="https://en.wikipedia.org/wiki/Functional_programming" title="What's this?">Functional: <i class="fa fa-check fa-lg" style="color:green;" ng-hide="!vm.language[0].Functional"></i><i class="fa fa-close fa-lg" style="color:red;" ng-hide="vm.language[0].Functional"></i></a></div>
+                        <div><a href="https://en.wikipedia.org/wiki/Procedural_programming" title="What's this?">Procedural: <i class="fa fa-check fa-lg" style="color:green;" ng-hide="!vm.language[0].Procedural"></i><i class="fa fa-close fa-lg" style="color:red;" ng-hide="vm.language[0].Procedural"></i></a></div>
+                    </div>
+
+
+                    <div style="display: inline-block; text-align: center; width: 25%; border-right: 2px solid #999999">
+                        <div style="border-bottom:2px solid #999999"><a href="https://en.wikipedia.org/wiki/Generic_programming" title="What's this?'">Generic: <i class="fa fa-check fa-lg" style="color:green;" ng-hide="!vm.language[0].Generic"></i><i class="fa fa-close fa-lg" style="color:red;" ng-hide="vm.language[0].Generic"></i></a></div>
+                        <div style="border-bottom:2px solid #999999"><a href="https://en.wikipedia.org/wiki/Reflective_programming" title="What's this?">Reflective: <i class="fa fa-check fa-lg" style="color:green;" ng-hide="!vm.language[0].Reflective"></i><i class="fa fa-close fa-lg" style="color:red;" ng-hide="vm.language[0].Reflective"></i></a></div>
+                        <div style="border-bottom:2px solid #999999"><a href="https://en.wikipedia.org/wiki/Event-driven_programming" title="What's this?">Event Driven: <i class="fa fa-check fa-lg" style="color:green;" ng-hide="!vm.language[0].EventDriven"></i><i class="fa fa-close fa-lg" style="color:red;" ng-hide="vm.language[0].EventDriven"></i></a></div>
+                        <div><a href="https://en.wikipedia.org/wiki/Standardization" title="What's this?">Standardized: </a> {{vm.language[0].Standardized}}</div>
+                    </div>
+                    <div style="display: inline-block; text-align: center; width: 49%; border-right: 2px solid #999999; float: right;">
+                        <div style="border-bottom: 2px solid #999999; padding: 0px 10px; margin-left: -10px;">{{vm.language[0].FF1}}</div>
+                        <div style="border-bottom: 2px solid #999999; padding: 0px 10px; margin-left: -10px;">{{vm.language[0].FF2}}</div>
+                        <div style="border-bottom: 2px solid #999999; padding: 0px 10px; margin-left: -10px;">{{vm.language[0].FF3}}</div>
+                        <div style="padding: 0px 10px; margin-left: -10px;"">{{vm.language[0].FF4}}</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> <!-- /widget-content -->
+
+    </div> <!-- /widget -->
+</div>
+
+<!--<table style="text-align: center;" class="col-md-6">
+    <tr>
+        <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Imperative_programming" title="What's this?">Imperative: </a></td>
+        <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Imperative}}</td>
+    </tr>
+    <tr>
+        <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Imperative_programming" title="What's this?">Object Oriented: </a></td>
+        <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].ObjectOriented}}</td>
+    </tr>
+    <tr>
+        <td style="border: 2px solid black; width: 50%;"><a href=" https />/en.wikipedia.org/wiki/Functional_programming" title="What's this?">Functional</a></td>
+        <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Functional}}</td>
+    </tr>
+    <tr>
+        <td style="border: 2px solid black; width: 50%;"><a href="https://en.wikipedia.org/wiki/Procedural_programming" title="What's this?">Procedural:</a></td>
+        <td style="border: 2px solid black; border-right: none; width: 50%;">{{vm.language[0].Procedural}}</td>
+    </tr>
+</table>
+<div style="width: 15px;"></div>
+<table style="border: 2px solid black; text-align: center;" class="col-md-6">
+    <tr>
+        <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Generic_programming" title="What's this?'">Generic: </a></td>
+        <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Generic}}</td>
+    </tr>
+    <tr>
+        <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Reflective_programming" title="What's this?">Reflective: </a></td>
+        <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Reflective}}</td>
+    </tr>
+    <tr>
+        <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Event-driven_programming" title="What's this?">Event Driven: </a></td>
+        <td style="border: 2px solid black; width: 50%;">{{vm.language[0].EventDriven}}</td>
+    </tr>
+    <tr>
+        <td style="border: 2px solid black; border-left: none; width: 50%;"><a href="https://en.wikipedia.org/wiki/Standardization" title="What's this?">Standardized: </a></td>
+        <td style="border: 2px solid black; width: 50%;">{{vm.language[0].Standardized}}</td>
+    </tr>
+</table>-->
+</div>
+<div class="snippet-alt" ng-hide="vm.language[0].Snippets" style="display:flex;justify-content:center;align-items:center;width:100%;"><h1><span style="display:flex;justify-content:center;align-items:center;width:100%;font-size: 1000%;">Uh oh!</span><br />There doesn't appear to be any snippets added yet! Maybe you'd like to add one?</h1></div>
+<div class="snippet-wrapper" ng-hide="!vm.language[0].Snippets">
+    <div class="col-md-4">
+        <div class="list-group">
+            <div class="list-group-item active" style="background-color: black;">
+                <h1>
+                    {{vm.catagories[0].Name}}
+                </h1>
+            </div>
+            <div class="list-group-item" ng-repeat="item in vm.catagories[0].Items">
+                <div ng-click="show=!show">
+                    <em style="font-size: 20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i>
+                </div>
+                <div ng-hide="!show" ng-click="show=!show">
+                    <div ng-repeat="(key, value) in item.Contents">
+                        <h4>{{key}}</h4>
+                        <div style="background-color: black; color: white; border-radius: 5px; padding: 1em;">{{value}}</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="list-group">
-                <div class="list-group-item active" style="background-color:black;">
-                    <h1>
-                        {{vm.catagories[0].Name}}
-                    </h1>
+    <div class="col-md-4">
+        <div class="list-group">
+            <div class="list-group-item active" style="background-color: black;">
+                <h1>
+                    {{vm.catagories[1].Name}}
+                </h1>
+            </div>
+            <div class="list-group-item" ng-repeat="item in vm.catagories[1].Items">
+                <div ng-click="show=!show">
+                    <em style="font-size: 20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i>
                 </div>
-                <div class="list-group-item" ng-repeat="item in vm.catagories[0].Items">
-                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i></div>
-                    <div ng-hide="!show" ng-click="show=!show">
-                        <div ng-repeat="(key, value) in item.Contents">
-                            <h4>{{key}}</h4>
-                            <div style="background-color:black;color:white;border-radius:5px;padding:1em;">{{value}}</div>
-                        </div>
+                <div ng-hide="!show" ng-click="show=!show">
+                    <div ng-repeat="(key, value) in item.Contents">
+                        <h4>{{key}}</h4>
+                        <div style="background-color: black; color: white; border-radius: 5px; padding: 1em;">{{value}}</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="list-group">
-                <div class="list-group-item active" style="background-color:black;">
-                    <h1>
-                        {{vm.catagories[1].Name}}
-                    </h1>
-                </div>
-                <div class="list-group-item" ng-repeat="item in vm.catagories[1].Items">
-                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i></div>
-                    <div ng-hide="!show" ng-click="show=!show">
-                        <div ng-repeat="(key, value) in item.Contents">
-                            <h4>{{key}}</h4>
-                            <div style="background-color:black;color:white;border-radius:5px;padding:1em;">{{value}}</div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <div class="col-md-4">
+        <div class="list-group">
+            <div class="list-group-item active" style="background-color: black;">
+                <h1>
+                    {{vm.catagories[2].Name}}
+                </h1>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="list-group">
-                <div class="list-group-item active" style="background-color:black;">
-                    <h1>
-                        {{vm.catagories[2].Name}}
-                    </h1>
+            <div class="list-group-item" ng-repeat="item in vm.catagories[2].Items">
+                <div ng-click="show=!show">
+                    <em style="font-size: 20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i>
                 </div>
-                <div class="list-group-item" ng-repeat="item in vm.catagories[2].Items">
-                    <div ng-click="show=!show"><em style="font-size:20px;">{{item.Name}}</em><i class="icon fa-angle-down" style="float: right"></i></div>
-                    <div ng-hide="!show">
-                        <div ng-repeat="(key, value) in item.Contents">
-                            <h4>{{key}}</h4>
-                            <div style="background-color:black;color:white;border-radius:5px;padding:1em;" ng-show="value">{{value}}</div>
-                        </div>
+                <div ng-hide="!show">
+                    <div ng-repeat="(key, value) in item.Contents">
+                        <h4>{{key}}</h4>
+                        <div style="background-color: black; color: white; border-radius: 5px; padding: 1em;" ng-show="value">{{value}}</div>
                     </div>
                 </div>
             </div>

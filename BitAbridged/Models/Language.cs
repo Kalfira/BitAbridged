@@ -21,5 +21,10 @@ namespace BitAbridged.Models
         public bool EventDriven { get; set; }
         public string Standardized { get; set; }
         public List<Snippet> Snippets { get; set; }
+        public string FF1 { get; set; }
+        public string FF2 { get; set; }
+        public string FF3 { get; set; }
+        public string FF4 { get; set; }
+
     }
 }

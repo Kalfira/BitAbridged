@@ -29,6 +29,7 @@
 
     function headerController($scope, searchService, authService) {
         var vm = this;
+        $scope.mouseOver = true;
         vm.clear = function (){$scope.query = ''}
         vm.searchable = 
         searchService.preload().then(function (data) {

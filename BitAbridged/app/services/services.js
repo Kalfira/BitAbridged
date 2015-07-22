@@ -15,7 +15,6 @@
                     data: 'username=' + username + '&password=' + password + '&grant_type=password',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 }).success(function(data) {
-                    console.log(data);
                     $window.sessionStorage.setItem('token', data.access_token);
                     deferred.resolve();
                 }).error(function(err) {
